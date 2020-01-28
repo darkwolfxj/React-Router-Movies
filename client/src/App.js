@@ -9,8 +9,8 @@ const App = () => {
   const [savedList, setSavedList] = useState( [] );
 
   const addToSavedList = movie => {
-  setSavedList( [...savedList, movie] );
-  };
+      (savedList.includes(movie)===true)?alert('Cannot add an existing movie.'):setSavedList( [...savedList, movie] );
+  }
 
   return (
     <div>
